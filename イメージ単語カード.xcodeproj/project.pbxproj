@@ -15,6 +15,14 @@
 		8AF41B812017697800929449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AF41B7F2017697800929449 /* LaunchScreen.storyboard */; };
 		8AF41B8C2017697800929449 /* ___________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41B8B2017697800929449 /* ___________Tests.swift */; };
 		8AF41B972017697800929449 /* ___________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41B962017697800929449 /* ___________UITests.swift */; };
+		8AF41BA920176ECF00929449 /* CreateNewWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41BA820176ECF00929449 /* CreateNewWordController.swift */; };
+		8AF41BB22019CD3300929449 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF41BB02019CD3300929449 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8AF41BB62019D51500929449 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF41BB52019D51400929449 /* Realm.framework */; };
+		8AF41BB72019D51500929449 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF41BB52019D51400929449 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8AF41BB92019D7A200929449 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41BB82019D7A200929449 /* WordData.swift */; };
+		8AF41BBB201AC5F100929449 /* DispWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41BBA201AC5F100929449 /* DispWordController.swift */; };
+		8AF41BBD201AC93500929449 /* UIViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41BBC201AC93500929449 /* UIViewBorder.swift */; };
+		8AF41BBF201AE0E500929449 /* PaddingUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41BBE201AE0E500929449 /* PaddingUILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8AF41BAC20199CF100929449 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AF41BB32019CD3300929449 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8AF41BB72019D51500929449 /* Realm.framework in Embed Frameworks */,
+				8AF41BB22019CD3300929449 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8AF41B702017697800929449 /* イメージ単語カード.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "イメージ単語カード.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF41B732017697800929449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +81,14 @@
 		8AF41B922017697800929449 /* イメージ単語カードUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "イメージ単語カードUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF41B962017697800929449 /* ___________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___________UITests.swift"; sourceTree = "<group>"; };
 		8AF41B982017697800929449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AF41BA820176ECF00929449 /* CreateNewWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWordController.swift; sourceTree = "<group>"; };
+		8AF41BAE2019CCA700929449 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-3.1.0/ios/swift-4.0.2/RealmSwift.framework"; sourceTree = "<group>"; };
+		8AF41BB02019CD3300929449 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		8AF41BB52019D51400929449 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		8AF41BB82019D7A200929449 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
+		8AF41BBA201AC5F100929449 /* DispWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispWordController.swift; sourceTree = "<group>"; };
+		8AF41BBC201AC93500929449 /* UIViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorder.swift; sourceTree = "<group>"; };
+		8AF41BBE201AE0E500929449 /* PaddingUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingUILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF41BB62019D51500929449 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +120,13 @@
 		8AF41B672017697800929449 = {
 			isa = PBXGroup;
 			children = (
+				8AF41BB52019D51400929449 /* Realm.framework */,
+				8AF41BB02019CD3300929449 /* RealmSwift.framework */,
 				8AF41B722017697800929449 /* イメージ単語カード */,
 				8AF41B8A2017697800929449 /* イメージ単語カードTests */,
 				8AF41B952017697800929449 /* イメージ単語カードUITests */,
 				8AF41B712017697800929449 /* Products */,
+				8AF41BAD2019CCA700929449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +150,11 @@
 				8AF41B7F2017697800929449 /* LaunchScreen.storyboard */,
 				8AF41B822017697800929449 /* Info.plist */,
 				8AF41B7A2017697800929449 /* ___________.xcdatamodeld */,
+				8AF41BA820176ECF00929449 /* CreateNewWordController.swift */,
+				8AF41BB82019D7A200929449 /* WordData.swift */,
+				8AF41BBA201AC5F100929449 /* DispWordController.swift */,
+				8AF41BBC201AC93500929449 /* UIViewBorder.swift */,
+				8AF41BBE201AE0E500929449 /* PaddingUILabel.swift */,
 			);
 			path = "イメージ単語カード";
 			sourceTree = "<group>";
@@ -128,6 +177,14 @@
 			path = "イメージ単語カードUITests";
 			sourceTree = "<group>";
 		};
+		8AF41BAD2019CCA700929449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AF41BAE2019CCA700929449 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +195,9 @@
 				8AF41B6C2017697800929449 /* Sources */,
 				8AF41B6D2017697800929449 /* Frameworks */,
 				8AF41B6E2017697800929449 /* Resources */,
+				8AF41BAC20199CF100929449 /* CopyFiles */,
+				8AF41BB32019CD3300929449 /* Embed Frameworks */,
+				8AF41BB42019CF3900929449 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -257,13 +317,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AF41BB42019CF3900929449 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8AF41B6C2017697800929449 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF41BBD201AC93500929449 /* UIViewBorder.swift in Sources */,
 				8AF41B762017697800929449 /* ViewController.swift in Sources */,
+				8AF41BBB201AC5F100929449 /* DispWordController.swift in Sources */,
 				8AF41B7C2017697800929449 /* ___________.xcdatamodeld in Sources */,
+				8AF41BBF201AE0E500929449 /* PaddingUILabel.swift in Sources */,
+				8AF41BA920176ECF00929449 /* CreateNewWordController.swift in Sources */,
+				8AF41BB92019D7A200929449 /* WordData.swift in Sources */,
 				8AF41B742017697800929449 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +513,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "イメージ単語カード/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ethica.-----------";
@@ -445,6 +531,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "イメージ単語カード/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ethica.-----------";

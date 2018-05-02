@@ -10,6 +10,15 @@ import UIKit
 import RealmSwift
 import Photos
 
+
+/// 単語一覧を表示する画面
+/// 以下の機能を具備する。
+/// ・Realmに格納された単語データをloadに初期化時に展開
+/// ・絞り込み機能
+/// ・新規登録画面へ遷移
+/// ・単語表示画面へ遷移
+/// ・削除機能
+///
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     // TableView : 単語リスト
@@ -23,15 +32,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // 単語key配列（表示用）
     var dispWordsArray = [String]()
     
-    
-    
+    /// 初期化処理
+    /// Realmから単語データを取得してTableViewに展開
     override func viewDidLoad() {
         
         // 最初にアクセス許可を出すためのおまじない
+        // TODO 他にいい方法ないか調査
         //let assets: PHFetchResult =
             PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
         // Realmを読み込み
         let realm = try! Realm()
+        
         // 単語名で並び替え
         let savedWords = realm.self.objects(WordData.self).sorted(byKeyPath: "wordName", ascending: true)
         
@@ -49,26 +60,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // 表示用の配列にコピー
         dispWordsArray = wordsArray;
         
+        // TODO これの意味がいまいちわかってないので調査
         searchBarField.delegate = self;
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+    /// メモリ不足時の処理
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    /// <#Description#>
+    /// 新規作成画面へ遷移
     ///
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender : UIBarButtonItem(新規作成アイコン）
     @IBAction func newCreateButton(_ sender: Any) {
         let view = storyboard?.instantiateViewController(withIdentifier: "createNewWordController") as! CreateNewWordController
         present(view, animated: true, completion: nil);
     }
     
-    // 表示するcellの数を返却する
+    
+    /// テーブルに表示する配列の総数を取得する。
+    ///
+    /// - Parameters:
+    ///   - tableView: UITableView
+    ///   - section: UITableViewのセクションindex
+    /// - Returns: 表示する配列の総数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dispWordsArray.count
     }
@@ -85,7 +103,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    // セル選択時
+    
+    /// セル選択時
+    ///
+    /// - Parameters:
+    ///   - tableView: <#tableView description#>
+    ///   - indexPath: <#indexPath description#>
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // 表示画面を作成
